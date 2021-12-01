@@ -3,8 +3,8 @@
 Features And To Do List
 
 - [x] Adding First Person Controller
-- [ ] Make A Protoyping Sandbox
-- [ ] Using NavMeshAgent For AI
+- [x] Make A Protoyping Sandbox
+- [x] Using NavMeshAgent For AI
 - [ ] Getting Stuck And Jittering
 - [ ] Enemy AI - Chase Range
 - [ ] Using OnDrawGizmosSelected
