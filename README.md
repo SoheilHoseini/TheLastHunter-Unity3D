@@ -9,7 +9,7 @@ Features And To Do List
 - [x] Enemy AI - Chase Range
 - [x] Using OnDrawGizmosSelected
 - [x] Enemy AI - Attack If Provoked
-- [ ] Give That Player A Gun
+- [x] Give That Player A Gun
 - [ ] Introduction To Raycasting
 - [ ] Enemy Health And Damage
 - [ ] Implement A Muzzle Flash
