@@ -5,9 +5,9 @@ Features And To Do List
 - [x] Adding First Person Controller
 - [x] Make A Protoyping Sandbox
 - [x] Using NavMeshAgent For AI
-- [ ] Getting Stuck And Jittering
-- [ ] Enemy AI - Chase Range
-- [ ] Using OnDrawGizmosSelected
+- [x] Getting Stuck And Jittering
+- [x] Enemy AI - Chase Range
+- [x] Using OnDrawGizmosSelected
 - [ ] Enemy AI - Attack If Provoked
 - [ ] Give That Player A Gun
 - [ ] Introduction To Raycasting
