@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour
     NavMeshAgent navMeshAgent; // Select the "NavMeshAgent" and click "ctrl + ." to suggest which library you need to add
 
     float distanceToTarget = Mathf.Infinity;// At the begginging, the zombie should not think target is close enough
-
+    bool isProvoked = false;
     
     void Start()
     {
@@ -23,10 +23,14 @@ public class EnemyAI : MonoBehaviour
     {
         distanceToTarget = Vector3.Distance(target.position, transform.position);
         
-        if (distanceToTarget <= chaseRange)
+        if(isProvoked)
         {
+            EngageTarget();
+        }
 
-            navMeshAgent.SetDestination(target.position);// This way, this game object will set it's destination to the target and follows it
+        else if (distanceToTarget <= chaseRange)
+        {
+            isProvoked = true;
         }
     }
 
@@ -36,5 +40,30 @@ public class EnemyAI : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
-    
+
+    void EngageTarget()
+    {
+        //Chase the target unit gets to the stopping distance which is set
+        //in Unity > Enemy (object) > Nav Mesh Agent (component) > Stopping Distance
+        if(distanceToTarget >= navMeshAgent.stoppingDistance)
+        {
+            ChaseTarget();
+        }
+
+        if (distanceToTarget <= navMeshAgent.stoppingDistance)
+        {
+            AttackTarget();
+        }
+    }
+
+    void ChaseTarget()
+    {
+        navMeshAgent.SetDestination(target.position);//This way, this game object will set it's destination to the target and follows it
+    }
+
+    void AttackTarget()
+    {
+        Debug.Log(name + " Attacked " + target.name);
+    }
+
 }
