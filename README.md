@@ -8,7 +8,7 @@ Features And To Do List
 - [x] Getting Stuck And Jittering
 - [x] Enemy AI - Chase Range
 - [x] Using OnDrawGizmosSelected
-- [ ] Enemy AI - Attack If Provoked
+- [x] Enemy AI - Attack If Provoked
 - [ ] Give That Player A Gun
 - [ ] Introduction To Raycasting
 - [ ] Enemy Health And Damage
