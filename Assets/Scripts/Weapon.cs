@@ -9,6 +9,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] Camera FPCamera;
     [SerializeField] float rangeOfShot = 100f;
     [SerializeField] float damageAmount = 20f;
+    [SerializeField] ParticleSystem muzzleFlash;//particle effect for shooting with the gun
+
 
     void Update()
     {
@@ -20,9 +22,20 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
+        PlayMuzzleFlash();//Plays a VFX when shooting
+        ProcessRaycasting();
+    }
+
+    private void PlayMuzzleFlash()
+    {
+        muzzleFlash.Play();
+    }
+
+    private void ProcessRaycasting()
+    {
         //Calculate the fire info
         RaycastHit hit;//information of our ray, colliding with any object
-        if(Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward , out hit, rangeOfShot))
+        if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, rangeOfShot))
         {
             Debug.Log("You hit " + hit.transform.name);
             //To Do: add some hit effects for visual players
@@ -31,7 +44,7 @@ public class Weapon : MonoBehaviour
             //call a method on EnemyHealth that decreases enemy health
             if (target == null) return; //This way if we hit sth other than enemy, will not get NullReference error
             target.TakeDamage(damageAmount);
-        }      
+        }
         else
         {
             //To avoid NullReference when shooting the sky
