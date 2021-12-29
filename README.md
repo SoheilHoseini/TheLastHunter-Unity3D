@@ -10,10 +10,10 @@ Features And To Do List
 - [x] Using OnDrawGizmosSelected
 - [x] Enemy AI - Attack If Provoked
 - [x] Give That Player A Gun
-- [ ] Introduction To Raycasting
-- [ ] Enemy Health And Damage
-- [ ] Implement A Muzzle Flash
-- [ ] Creating Shooting Hit Effect
+- [x] Introduction To Raycasting
+- [x] Enemy Health And Damage
+- [x] Implement A Muzzle Flash
+- [x] Creating Shooting Hit Effect
 - [ ] Introduction  To Animator Controller
 - [ ] Creating A Simple Animation
 - [ ] Animator Transition Conditions
