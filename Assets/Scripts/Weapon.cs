@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] float rangeOfShot = 100f;
     [SerializeField] float damageAmount = 20f;
     [SerializeField] ParticleSystem muzzleFlash;//particle effect for shooting with the gun
-
+    [SerializeField] GameObject hitEffect;// we use GameObject to be able to destroy it (instead of ParticleSystem)
 
     void Update()
     {
@@ -37,7 +37,7 @@ public class Weapon : MonoBehaviour
         RaycastHit hit;//information of our ray, colliding with any object
         if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, rangeOfShot))
         {
-            Debug.Log("You hit " + hit.transform.name);
+            CreateHitImpact(hit);
             //To Do: add some hit effects for visual players
 
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
@@ -50,5 +50,12 @@ public class Weapon : MonoBehaviour
             //To avoid NullReference when shooting the sky
             return;
         }
+    }
+
+    private void CreateHitImpact(RaycastHit hit)
+    {
+        //Instantiate hit effects at the position when the bullets hit
+        GameObject impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
+        Destroy(impact, 0.1f);//destroy the hit effect 1 sec after it's been instantiated
     }
 }
