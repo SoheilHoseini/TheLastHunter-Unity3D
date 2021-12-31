@@ -1,5 +1,8 @@
 # TheLastHunter-Unity3D
 
+Descrtiption for prototype: 
+  You can move around with your gun and shoot with it, and if get into the enemy chase  range, it will come after you where ever you go, but you after a few shots, you call kill   him.
+
 Features And To Do List
 
 - [x] Adding First Person Controller
