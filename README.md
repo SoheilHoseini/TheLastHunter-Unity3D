@@ -21,8 +21,8 @@ Features And To Do List
 - [x] Simple Animation
 - [x] Animator Transition
 - [x] Trigger Animation
-- [ ] Animation Events
-- [ ] Player Health
+- [x] Animation Events
+- [x] Player Health
 - [ ] Rotate To Face Target
 - [ ] Game Over User Interface
 - [ ] Death Handler
