@@ -58,12 +58,15 @@ public class EnemyAI : MonoBehaviour
 
     void ChaseTarget()
     {
+        GetComponent<Animator>().SetTrigger("move");// Enable move animation when enemy start chasing the player
+        GetComponent<Animator>().SetBool("attack", false);// disable attack animation
         navMeshAgent.SetDestination(target.position);//This way, this game object will set it's destination to the target and follows it
     }
 
     void AttackTarget()
     {
-        Debug.Log(name + " Attacked " + target.name);
+        GetComponent<Animator>().SetBool("attack", true);// enable attack animation
+        //Debug.Log(name + " Attacked " + target.name);
     }
 
 }
