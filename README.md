@@ -14,10 +14,10 @@ Features And To Do List
 - [x] Enemy Health And Damage
 - [x] Implement A Muzzle Flash
 - [x] Creating Shooting Hit Effect
-- [ ] Animator Controller
-- [ ] Simple Animation
-- [ ] Animator Transition
-- [ ] Trigger Animation
+- [x] Animator Controller
+- [x] Simple Animation
+- [x] Animator Transition
+- [x] Trigger Animation
 - [ ] Animation Events
 - [ ] Player Health
 - [ ] Rotate To Face Target
