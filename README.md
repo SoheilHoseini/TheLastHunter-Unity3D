@@ -28,7 +28,7 @@ Features And To Do List
 - [x] Death Handler
 - [x] BroadcastMessage
 - [x] Early Gameplay Loop
-- [ ] Weapon System
+- [x] Weapon System
 - [ ] Weapon Zoom - Field Of View
 - [ ] Weapon Zoom - Mouse Sensitivity
 - [ ] Ammo Functionality
