@@ -23,11 +23,11 @@ Features And To Do List
 - [x] Trigger Animation
 - [x] Animation Events
 - [x] Player Health
-- [ ] Rotate To Face Target
-- [ ] Game Over User Interface
-- [ ] Death Handler
-- [ ] BroadcastMessage
-- [ ] Early Gameplay Loop
+- [x] Rotate To Face Target
+- [x] Game Over User Interface
+- [x] Death Handler
+- [x] BroadcastMessage
+- [x] Early Gameplay Loop
 - [ ] Weapon System
 - [ ] Weapon Zoom - Field Of View
 - [ ] Weapon Zoom - Mouse Sensitivity
