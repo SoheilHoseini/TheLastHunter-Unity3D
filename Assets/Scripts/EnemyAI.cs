@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField] Transform target;// We need the position of the player so we use "Transform"
     [SerializeField] float chaseRange = 200f;// Set the chase range of the enemy that player should not get closer than that
+    [SerializeField] float turnSpeed = 5f;
 
     NavMeshAgent navMeshAgent; // Select the "NavMeshAgent" and click "ctrl + ." to suggest which library you need to add
 
@@ -34,6 +35,12 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    //when the enemy gets shot, it should be provoked
+    public void OnDamageTaken()
+    {
+        isProvoked = true;
+    }
+
     void OnDrawGizmosSelected()
     {
         //Display chase range of enemy when we select it
@@ -43,9 +50,11 @@ public class EnemyAI : MonoBehaviour
 
     void EngageTarget()
     {
+        FaceTarget();// Rotate to target
+
         //Chase the target unit gets to the stopping distance which is set
         //in Unity > Enemy (object) > Nav Mesh Agent (component) > Stopping Distance
-        if(distanceToTarget >= navMeshAgent.stoppingDistance)
+        if (distanceToTarget >= navMeshAgent.stoppingDistance)
         {
             ChaseTarget();
         }
@@ -66,7 +75,21 @@ public class EnemyAI : MonoBehaviour
     void AttackTarget()
     {
         GetComponent<Animator>().SetBool("attack", true);// enable attack animation
+
+        
         //Debug.Log(name + " Attacked " + target.name);
     }
 
+
+    //Rotate towards the player even when zombie is in "Attack" state
+    private void FaceTarget()
+    {
+        //this gives a vector toward the player with magnitude of 1 (i ,j vectors)
+        Vector3 direction = (target.position - transform.position).normalized;
+
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+
+        //Slerp() is used to rotate smoothly
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
+    }
 }
