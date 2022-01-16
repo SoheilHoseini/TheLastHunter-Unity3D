@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     //Take the amount of damage the gun can make and decrease it from enemy health
     public void TakeDamage(float damage)
     {
+        BroadcastMessage("OnDamageTaken");//call a public method on this game object or its children
         hitPoints -= damage;
         if(hitPoints <= 0)
         {

@@ -35,6 +35,12 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    //when the enemy gets shot, it should be provoked
+    public void OnDamageTaken()
+    {
+        isProvoked = true;
+    }
+
     void OnDrawGizmosSelected()
     {
         //Display chase range of enemy when we select it
