@@ -1434,6 +1434,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 630807007}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &633855451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9057892394976996030, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+    type: 3}
+  m_PrefabInstance: {fileID: 985948579}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d3256766755d6843a18655fc763b3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &635506592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2453,6 +2465,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1287290801356316064, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: deathHandler
+      value: 
+      objectReference: {fileID: 633855451}
+    - target: {fileID: 9057892394976996030, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: gameOverCanvas
+      value: 
+      objectReference: {fileID: 787626585}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
 --- !u!1001 &1041120699
@@ -3459,7 +3481,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1598797700}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1804557715}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1598797700
 MonoBehaviour:
   m_ObjectHideFlags: 0

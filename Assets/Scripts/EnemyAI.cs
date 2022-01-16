@@ -44,7 +44,7 @@ public class EnemyAI : MonoBehaviour
 
     void EngageTarget()
     {
-        //FaceTarget();// Rotate to target
+        FaceTarget();// Rotate to target
 
         //Chase the target unit gets to the stopping distance which is set
         //in Unity > Enemy (object) > Nav Mesh Agent (component) > Stopping Distance

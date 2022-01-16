@@ -9,6 +9,7 @@ public class SceneLoader : MonoBehaviour
     public void ReloadGame()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1;// set the time up again
     }
 
     //reload the game when we hit "Quit" button
