@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class Ammo : MonoBehaviour
 {
-    [SerializeField] int ammoAmount = 10;// This is the number of bullets 
+    [SerializeField] AmmoSlot[] ammoSlots;
+
+    //I think ammo slot is a holder of bullet and other ammo types like a backpack
+    [System.Serializable]//this will show the private class contents in the inspector
+    private class AmmoSlot
+    {
+        public AmmoType ammoType;
+        public int ammoAmount;// This is the number of bullets 
+    }
 
     //returns number of bullets left
     public int GetCurrentAmmo()

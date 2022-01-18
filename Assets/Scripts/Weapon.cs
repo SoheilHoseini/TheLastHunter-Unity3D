@@ -16,6 +16,10 @@ public class Weapon : MonoBehaviour
 
     bool canShoot = true;
 
+    private void OnEnable()
+    {
+        canShoot = true;// this is to fix the bug that switching between weapons, might disable shooting for the new one
+    }
     void Update()
     {
         if(Input.GetButtonDown("Fire1") && canShoot == true)
