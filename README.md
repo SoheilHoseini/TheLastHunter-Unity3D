@@ -37,8 +37,8 @@ Features And To Do List
 - [x] Set Active Weapon
 - [x] Player Input To Select Weapon
 - [x] Public Grow
-- [ ] Different Weapon Different Ammo
-- [ ] Quick Move
+- [x] Different Weapon Different Ammo
+- [x] Quick Move
 - [ ] Ammo Pickup
 - [ ] Ammo
 - [ ] Add Zombie
