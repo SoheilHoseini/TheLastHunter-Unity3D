@@ -33,11 +33,11 @@ Features And To Do List
 - [x] Weapon Zoom - Mouse Sensitivity
 - [x] Ammo Functionality
 - [x] Multiple Weapon Types
-- [ ] Weapon Differentiation
-- [ ] Set Active Weapon
-- [ ] Player Input To Select Weapon
-- [ ] Public Grow
-- [ ] Different Weapons
+- [x] Weapon Differentiation
+- [x] Set Active Weapon
+- [x] Player Input To Select Weapon
+- [x] Public Grow
+- [ ] Different Weapon Different Ammo
 - [ ] Quick Move
 - [ ] Ammo Pickup
 - [ ] Ammo
