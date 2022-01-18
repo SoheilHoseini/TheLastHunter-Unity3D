@@ -3658,12 +3658,12 @@ PrefabInstance:
     - target: {fileID: 1148243317072678751, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1234975156668929371, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1287290801356316064, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
@@ -3675,6 +3675,11 @@ PrefabInstance:
       propertyPath: deathHandler
       value: 
       objectReference: {fileID: 633855451}
+    - target: {fileID: 2355604178937512285, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: ammoAmount
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3423181732442338687, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: rangeOfShot
@@ -3700,11 +3705,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5850331492946401016, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: zoomedInFOV
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6918630239721854004, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: fpsCamera
       value: 
       objectReference: {fileID: 1814028110}
+    - target: {fileID: 7146516372506092510, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: currentWeapon
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9057892394976996030, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: gameOverCanvas
