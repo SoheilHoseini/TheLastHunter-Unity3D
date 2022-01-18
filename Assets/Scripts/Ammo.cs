@@ -11,18 +11,32 @@ public class Ammo : MonoBehaviour
     private class AmmoSlot
     {
         public AmmoType ammoType;
-        public int ammoAmount;// This is the number of bullets 
+        public int ammoAmount;// This is the number of bullets and is set in the inspector
     }
 
     //returns number of bullets left
-    public int GetCurrentAmmo()
+    public int GetCurrentAmmo(AmmoType ammoType)
     {
-        return ammoAmount;
+        return GetAmmoSlot(ammoType).ammoAmount;
     }
 
     //reduce number of bullets when we shoot
-    public void ReduceCurrentAmmo()
+    public void ReduceCurrentAmmo(AmmoType ammoType)
     {
-        ammoAmount--;
+        GetAmmoSlot(ammoType).ammoAmount--;
+    }
+
+    //return the ammo slot information that we are looking for
+    private AmmoSlot GetAmmoSlot(AmmoType myAmmoType)
+    {
+        foreach(AmmoSlot slot in ammoSlots)
+        {
+            if(slot.ammoType == myAmmoType)
+            {
+                return slot;
+            }
+        }
+
+        return null;//to fix return type error
     }
 }
