@@ -12,18 +12,23 @@ public class Weapon : MonoBehaviour
     [SerializeField] ParticleSystem muzzleFlash;//particle effect for shooting with the gun
     [SerializeField] GameObject hitEffect;// we use GameObject to be able to destroy it (instead of ParticleSystem)
     [SerializeField] Ammo ammoSlot; // How much ammo we have
+    [SerializeField] float timeBetweenShots = 0.5f;
+
+    bool canShoot = true;
 
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown("Fire1") && canShoot == true)
         {
-            Shoot();
+            StartCoroutine(Shoot());
         }
     }
 
 
-    private void Shoot()
+    IEnumerator Shoot()
     {
+        canShoot = false;
+
         //player only can shoot we he has ammo left
         if (ammoSlot.GetCurrentAmmo() > 0)
         {
@@ -31,6 +36,8 @@ public class Weapon : MonoBehaviour
             ProcessRaycasting();
             ammoSlot.ReduceCurrentAmmo();// reduce bullets when we shoot
         }
+        yield return new WaitForSeconds(timeBetweenShots);
+        canShoot = true;
     }
 
     private void PlayMuzzleFlash()

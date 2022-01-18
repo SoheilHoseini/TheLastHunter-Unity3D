@@ -3658,7 +3658,7 @@ PrefabInstance:
     - target: {fileID: 1148243317072678751, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1234975156668929371, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
@@ -3675,6 +3675,26 @@ PrefabInstance:
       propertyPath: deathHandler
       value: 
       objectReference: {fileID: 633855451}
+    - target: {fileID: 3423181732442338687, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: rangeOfShot
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552627399418883963, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: rangeOfShot
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552627399418883963, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833611825101574485, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5833611825101737333, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: m_LocalScale.x
