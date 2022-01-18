@@ -3655,6 +3655,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1148243317072678751, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234975156668929371, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1287290801356316064, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: hitPoints
@@ -3665,6 +3675,11 @@ PrefabInstance:
       propertyPath: deathHandler
       value: 
       objectReference: {fileID: 633855451}
+    - target: {fileID: 5833611825101737333, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6918630239721854004, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: fpsCamera
