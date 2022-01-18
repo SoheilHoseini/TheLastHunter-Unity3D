@@ -16,6 +16,7 @@ public class DeathHandler : MonoBehaviour
         gameOverCanvas.enabled = true;// show death menu when player dies
 
         Time.timeScale = 0;
+        FindObjectOfType<WeaponSwitcher>().enabled = false; // Does not allow the player to switch weapon after death
         Cursor.lockState = CursorLockMode.None;// allow the player to use mouse cursor
         Cursor.visible = true;// make the cursor visible
     }

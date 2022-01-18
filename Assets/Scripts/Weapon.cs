@@ -11,11 +11,18 @@ public class Weapon : MonoBehaviour
     [SerializeField] float damageAmount = 20f;
     [SerializeField] ParticleSystem muzzleFlash;//particle effect for shooting with the gun
     [SerializeField] GameObject hitEffect;// we use GameObject to be able to destroy it (instead of ParticleSystem)
+    
     [SerializeField] Ammo ammoSlot; // How much ammo we have
+    [SerializeField] AmmoType ammoType; // Bullets, Shells or Rockets?!    :)
+
     [SerializeField] float timeBetweenShots = 0.5f;
 
     bool canShoot = true;
 
+    private void OnEnable()
+    {
+        canShoot = true;// this is to fix the bug that switching between weapons, might disable shooting for the new one
+    }
     void Update()
     {
         if(Input.GetButtonDown("Fire1") && canShoot == true)
@@ -30,11 +37,11 @@ public class Weapon : MonoBehaviour
         canShoot = false;
 
         //player only can shoot we he has ammo left
-        if (ammoSlot.GetCurrentAmmo() > 0)
+        if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
         {
             PlayMuzzleFlash();//Plays a VFX when shooting
             ProcessRaycasting();
-            ammoSlot.ReduceCurrentAmmo();// reduce bullets when we shoot
+            ammoSlot.ReduceCurrentAmmo(ammoType);// reduce bullets when we shoot
         }
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;
