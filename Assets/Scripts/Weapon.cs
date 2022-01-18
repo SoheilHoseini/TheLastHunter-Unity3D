@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] float damageAmount = 20f;
     [SerializeField] ParticleSystem muzzleFlash;//particle effect for shooting with the gun
     [SerializeField] GameObject hitEffect;// we use GameObject to be able to destroy it (instead of ParticleSystem)
+    [SerializeField] Ammo ammoSlot; // How much ammo we have
 
     void Update()
     {
@@ -23,8 +24,13 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
-        PlayMuzzleFlash();//Plays a VFX when shooting
-        ProcessRaycasting();
+        //player only can shoot we he has ammo left
+        if (ammoSlot.GetCurrentAmmo() > 0)
+        {
+            PlayMuzzleFlash();//Plays a VFX when shooting
+            ProcessRaycasting();
+            ammoSlot.ReduceCurrentAmmo();// reduce bullets when we shoot
+        }
     }
 
     private void PlayMuzzleFlash()
