@@ -29,10 +29,10 @@ Features And To Do List
 - [x] BroadcastMessage
 - [x] Early Gameplay Loop
 - [x] Weapon System
-- [ ] Weapon Zoom - Field Of View
-- [ ] Weapon Zoom - Mouse Sensitivity
-- [ ] Ammo Functionality
-- [ ] Multiple Weapon Types
+- [x] Weapon Zoom - Field Of View
+- [x] Weapon Zoom - Mouse Sensitivity
+- [x] Ammo Functionality
+- [x] Multiple Weapon Types
 - [ ] Weapon Differentiation
 - [ ] Set Active Weapon
 - [ ] Player Input To Select Weapon
