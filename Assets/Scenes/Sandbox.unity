@@ -2833,7 +2833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &787626582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3660,6 +3660,11 @@ PrefabInstance:
       propertyPath: deathHandler
       value: 
       objectReference: {fileID: 633855451}
+    - target: {fileID: 6918630239721854004, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: fpsCamera
+      value: 
+      objectReference: {fileID: 1814028110}
     - target: {fileID: 9057892394976996030, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: gameOverCanvas
@@ -6751,6 +6756,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943fa36721ecef2469a26c0d7c4851e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!20 &1814028110 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2000000, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+    type: 3}
+  m_PrefabInstance: {fileID: 985948579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1838069887
 PrefabInstance:
   m_ObjectHideFlags: 0
