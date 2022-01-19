@@ -41,8 +41,8 @@ Features And To Do List
 - [x] Quick Move
 - [x] Ammo Pickup Basic
 - [x] Differenr Ammo Pickups
-- [ ] Add Zombie
-- [ ] Zombie Attack
+- [x] Add Zombie
+- [x] Zombie Attack
 - [ ] Level Design
 - [ ] Train And Trees
 - [ ] Props
