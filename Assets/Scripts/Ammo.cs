@@ -26,6 +26,12 @@ public class Ammo : MonoBehaviour
         GetAmmoSlot(ammoType).ammoAmount--;
     }
 
+    //increase number of bullets when we take an ammo pack
+    public void IncreaseCurrentAmmo(AmmoType ammoType, int ammoAmount)
+    {
+        GetAmmoSlot(ammoType).ammoAmount += ammoAmount;
+    }
+
     //return the ammo slot information that we are looking for
     private AmmoSlot GetAmmoSlot(AmmoType myAmmoType)
     {
