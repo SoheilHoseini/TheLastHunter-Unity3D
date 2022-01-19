@@ -43,9 +43,9 @@ Features And To Do List
 - [x] Differenr Ammo Pickups
 - [x] Add Zombie
 - [x] Zombie Attack
-- [ ] Level Design
-- [ ] Train And Trees
-- [ ] Props
+- [x] Level Design
+- [x] Train And Trees
+- [x] Props
 - [ ] Rooms
 - [ ] Make Levels
 - [ ] Textures
