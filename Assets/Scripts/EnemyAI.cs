@@ -13,15 +13,23 @@ public class EnemyAI : MonoBehaviour
 
     float distanceToTarget = Mathf.Infinity;// At the begginging, the zombie should not think target is close enough
     bool isProvoked = false;
-    
+
+    EnemyHealth health;// We use this to stop the bug that dead zombie following the player
+
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        health = GetComponent<EnemyHealth>();
     }
 
     
     void Update()
     {
+        if(health.IsDead() == true)
+        {
+            this.enabled = false;// disable the "EnemyAI" script
+            navMeshAgent.enabled = false; // not follow the player after death
+        }
         distanceToTarget = Vector3.Distance(target.position, transform.position);
         
         if(isProvoked)
