@@ -39,8 +39,8 @@ Features And To Do List
 - [x] Public Grow
 - [x] Different Weapon Different Ammo
 - [x] Quick Move
-- [ ] Ammo Pickup
-- [ ] Ammo
+- [x] Ammo Pickup Basic
+- [x] Differenr Ammo Pickups
 - [ ] Add Zombie
 - [ ] Zombie Attack
 - [ ] Level Design
