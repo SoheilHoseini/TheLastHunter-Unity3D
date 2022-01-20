@@ -53,5 +53,5 @@ Features And To Do List
 - [x] FlashLight
 - [x] Battery Pickup
 - [x] Diplay Current Ammo UI
-- [ ] Damage Received UI
-- [ ] Polish
+- [x] Damage Received UI
+- [x] Polish
