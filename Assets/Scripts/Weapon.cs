@@ -23,6 +23,8 @@ public class Weapon : MonoBehaviour
 
     bool canShoot = true;
 
+    [SerializeField] AudioSource gunShotSFX;
+
     private void OnEnable()
     {
         canShoot = true;// this is to fix the bug that switching between weapons, might disable shooting for the new one
@@ -69,6 +71,7 @@ public class Weapon : MonoBehaviour
 
     IEnumerator Shoot()
     {
+
         canShoot = false;
 
         //player only can shoot we he has ammo left
@@ -77,6 +80,7 @@ public class Weapon : MonoBehaviour
             PlayMuzzleFlash();//Plays a VFX when shooting
             ProcessRaycasting();
             ammoSlot.ReduceCurrentAmmo(ammoType);// reduce bullets when we shoot
+            gunShotSFX.Play();
         }
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;

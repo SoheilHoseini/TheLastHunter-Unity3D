@@ -17,6 +17,7 @@ public class EnemyAI : MonoBehaviour
     EnemyHealth health;// We use this to stop the bug that dead zombie following the player
     Transform target;// We need the position of the player so we use "Transform"
 
+    [SerializeField] AudioSource zombieAttackSFX;
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -85,8 +86,7 @@ public class EnemyAI : MonoBehaviour
     void AttackTarget()
     {
         GetComponent<Animator>().SetBool("attack", true);// enable attack animation
-
-        
+        zombieAttackSFX.Play();
         //Debug.Log(name + " Attacked " + target.name);
     }
 
