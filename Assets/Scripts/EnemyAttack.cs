@@ -16,7 +16,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if (target == null) return;
         target.TakeDamage(damage);
-        Debug.Log("Bang Bang! I shoot you down");
+        target.GetComponent<DisplayDamage>().ShowDamageImpact();//display blood image on screen
     }
 
 }
