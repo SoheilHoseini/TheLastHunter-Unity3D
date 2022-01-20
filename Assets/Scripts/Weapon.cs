@@ -50,21 +50,21 @@ public class Weapon : MonoBehaviour
     private void DisplayShells()
     {
         int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
-        shellText.text = "Shells:" + currentAmmo.ToString();
+        shellText.text = "Shells: " + currentAmmo.ToString();
     }
 
     //Rockets
     private void DisplayRockets()
     {
         int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
-        rocketText.text = "Rockets:" + currentAmmo.ToString();
+        rocketText.text = "Rockets: " + currentAmmo.ToString();
     }
 
     //Bullets
     private void DisplayBullets()
     {
         int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
-        bulletText.text = "Bullets:" + currentAmmo.ToString();
+        bulletText.text = "Bullets: " + currentAmmo.ToString();
     }
 
     IEnumerator Shoot()
