@@ -46,10 +46,10 @@ Features And To Do List
 - [x] Level Design
 - [x] Train And Trees
 - [x] Props
-- [ ] Rooms
-- [ ] Make Levels
-- [ ] Textures
-- [ ] Lights
+- [x] Rooms
+- [x] Make Levels
+- [x] Textures
+- [x] Lights
 - [ ] FlashLight
 - [ ] Battery Pickup
 - [ ] Diplay Current Ammo UI
