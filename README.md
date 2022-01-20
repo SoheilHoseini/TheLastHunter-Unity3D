@@ -50,7 +50,7 @@ Features And To Do List
 - [x] Make Levels
 - [x] Textures
 - [x] Lights
-- [ ] FlashLight
+- [x] FlashLight
 - [ ] Battery Pickup
 - [ ] Diplay Current Ammo UI
 - [ ] Damage Received UI
