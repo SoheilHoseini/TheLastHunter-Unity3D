@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] Transform target;// We need the position of the player so we use "Transform"
+    
     [SerializeField] float chaseRange = 200f;// Set the chase range of the enemy that player should not get closer than that
     [SerializeField] float turnSpeed = 5f;
 
@@ -15,11 +15,13 @@ public class EnemyAI : MonoBehaviour
     bool isProvoked = false;
 
     EnemyHealth health;// We use this to stop the bug that dead zombie following the player
+    Transform target;// We need the position of the player so we use "Transform"
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         health = GetComponent<EnemyHealth>();
+        target = FindObjectOfType<PlayerHealth>().transform;
     }
 
     

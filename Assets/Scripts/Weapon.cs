@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Weapon : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class Weapon : MonoBehaviour
     [SerializeField] AmmoType ammoType; // Bullets, Shells or Rockets?!    :)
 
     [SerializeField] float timeBetweenShots = 0.5f;
+    [SerializeField] TextMeshProUGUI bulletText;
+    [SerializeField] TextMeshProUGUI shellText;
+    [SerializeField] TextMeshProUGUI rocketText;
 
     bool canShoot = true;
 
@@ -25,12 +29,43 @@ public class Weapon : MonoBehaviour
     }
     void Update()
     {
+        //Display ammo in screen
+        if (ammoType == AmmoType.Bullets)
+            DisplayBullets();
+
+        else if (ammoType == AmmoType.Rockets)
+            DisplayRockets();
+
+        else if (ammoType == AmmoType.Shells)
+            DisplayShells();
+
+
         if(Input.GetButtonDown("Fire1") && canShoot == true)
         {
             StartCoroutine(Shoot());
         }
     }
+    
+    //Shells
+    private void DisplayShells()
+    {
+        int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
+        shellText.text = "Shells:" + currentAmmo.ToString();
+    }
 
+    //Rockets
+    private void DisplayRockets()
+    {
+        int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
+        rocketText.text = "Rockets:" + currentAmmo.ToString();
+    }
+
+    //Bullets
+    private void DisplayBullets()
+    {
+        int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
+        bulletText.text = "Bullets:" + currentAmmo.ToString();
+    }
 
     IEnumerator Shoot()
     {
