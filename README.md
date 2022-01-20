@@ -46,7 +46,7 @@ Features And To Do List
 - [x] Level Design
 - [x] Train And Trees
 - [x] Props
-- [x] Room
+- [x] Rooms
 - [x] Make Levels
 - [x] Textures
 - [x] Lights
