@@ -6,7 +6,7 @@ using UnityEngine;
 public class FlashLightSystem : MonoBehaviour
 {
     [SerializeField] float lightDecay = 0.1f;// How much the flash light is fading over time
-    [SerializeField] float angleDecay = 1f; // The amount of range decreasing
+    [SerializeField] float angleDecay = 0.5f; // The amount of range decreasing
     [SerializeField] float minimumAngle = 40f; // Flash light angle can not go below this
 
     Light myLight;
@@ -20,6 +20,18 @@ public class FlashLightSystem : MonoBehaviour
     {
         DecreaseLightAngle();
         DecreaseLightIntensity();
+    }
+
+    //when we pick battery the angle shoud increase
+    public void RestoreLightAngle(float restoreAngle)
+    {
+        myLight.spotAngle = restoreAngle;
+    }
+
+    //when we pick battery the angle shoud increase
+    public void AddLightIntensity(float intensityAmount)
+    {
+        myLight.intensity += intensityAmount;
     }
 
 
