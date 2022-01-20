@@ -51,7 +51,7 @@ Features And To Do List
 - [x] Textures
 - [x] Lights
 - [x] FlashLight
-- [ ] Battery Pickup
+- [x] Battery Pickup
 - [ ] Diplay Current Ammo UI
 - [ ] Damage Received UI
 - [ ] Polish
