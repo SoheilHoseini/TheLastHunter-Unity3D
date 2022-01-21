@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] float hitPoints = 100f;
 
     [SerializeField] Canvas winCanvas;
+    [SerializeField] AudioSource winSFX;
 
     private void Start()
     {
@@ -39,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
     private void Win()
     {
         winCanvas.enabled = true;// show death menu when player dies
-
+        winSFX.Play();
         Time.timeScale = 0;
         FindObjectOfType<WeaponSwitcher>().enabled = false; // Does not allow the player to switch weapon after death
         Cursor.lockState = CursorLockMode.None;// allow the player to use mouse cursor

@@ -62,7 +62,6 @@ public class EnemyAI : MonoBehaviour
     void EngageTarget()
     {
         FaceTarget();// Rotate to target
-
         //Chase the target unit gets to the stopping distance which is set
         //in Unity > Enemy (object) > Nav Mesh Agent (component) > Stopping Distance
         if (distanceToTarget >= navMeshAgent.stoppingDistance)
@@ -81,6 +80,7 @@ public class EnemyAI : MonoBehaviour
         GetComponent<Animator>().SetTrigger("move");// Enable move animation when enemy start chasing the player
         GetComponent<Animator>().SetBool("attack", false);// disable attack animation
         navMeshAgent.SetDestination(target.position);//This way, this game object will set it's destination to the target and follows it
+        //zombieAttackSFX.Play();
     }
 
     void AttackTarget()
